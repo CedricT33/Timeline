@@ -1,0 +1,33 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    padding: 15px;
+}
+
+.center-cotes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.carte-a-jouer {
+    padding: 20px;
+    flex-direction: column;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+mat-card {
+    margin: 10px;
+}
+
+.annee {
+    color: #bbb;
+    margin-top: 0px;
+}

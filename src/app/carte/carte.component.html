@@ -1,0 +1,32 @@
+<div class="form mat-elevation-z8">
+  <h3>{{titre}} de Carte</h3>
+  <div class="flex">
+    <mat-form-field>
+      <input matInput maxlength="20" placeholder="Titre" [(ngModel)]="carte.titre">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput maxlength="4" placeholder="Année" [(ngModel)]="carte.annee">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Url de l'image" [(ngModel)]="carte.imageUrl">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput maxlength="27" placeholder="Description" [(ngModel)]="carte.description">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Timeline" [(ngModel)]="carte.timeline" disabled="{{isDisabled}}">
+        <mat-option  *ngFor="let tim of timelines"  [value]="tim.nom">{{tim.nom}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" (click)="onSave()">Sauver</button>
+</div>
+
+<div class="center">
+  <mat-card class="center carte-a-jouer">
+    <h4 class="center">{{carte.titre}}</h4>
+    <p class="annee">{{carte.annee}}</p>
+      <img src={{carte.imageUrl}}/>
+    <p class="center">{{carte.description}}</p>
+  </mat-card>
+</div>
